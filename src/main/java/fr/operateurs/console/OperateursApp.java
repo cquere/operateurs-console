@@ -13,20 +13,25 @@ public class OperateursApp {
 		System.out.println("Veuillez saisir le second nombre...");
 		int b = question.nextInt();
 
-		if (b <= 0) {
-			System.out.println("Le second nombre doit être strictement positif");
+		int result = a + b;
+		System.out.println(a + " + " + b + " = " + result);
+		result = a - b;
+		System.out.println(a + " - " + b + " = " + result);
+		result = a * b;
+		System.out.println(a + " * " + b + " = " + result);
+		if (b == 0) {
+			System.out.println("Le second nombre doit être different de 0 pour effectué la division et le modulo");
 
 		} else {
-			int result = a + b;
-			System.out.println(a + " + " + b + " = " + result);
-			result = a - b;
-			System.out.println(a + " - " + b + " = " + result);
-			result = a * b;
-			System.out.println(a + " * " + b + " = " + result);
 			result = a / b;
 			System.out.println(a + " / " + b + " = " + result);
-			result = a % b;
-			System.out.println(a + " % " + b + " = " + result);
+			if (b < 0) {
+				System.out.println("Le second nombre doit être supérieur à 0 pour effectué le modulo");
+
+			} else {
+				result = a % b;
+				System.out.println(a + " % " + b + " = " + result);
+			}
 		}
 	}
 }
